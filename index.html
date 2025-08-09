@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Listo - seu gerenciador de tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Listo</h1>
+    </header>
+
+    <main>
+        <!-- SIDEBAR: lista de pastas -->
+        <nav id="sidebar" aria-label="Pastas">
+            <h3>Pastas</h3>
+            <ul id="folder-list"></ul>
+        </nav>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <div class="container">
+            <!-- Apresentação -->
+            <div id="apresentacao">
+                <h2>Bem-vindo ao Listo!</h2>
+                <p>Gerencie suas tarefas por pasta. Clique abaixo para criar sua primeira pasta.</p>
+                <button id="add-folder-btn" class="btn">Adicionar Pasta</button>
+            </div>
+
+            <!-- Área de tarefas -->
+            <section id="task-list" aria-live="polite"></section>
+        </div>
+    </main>
+    
+    <!-- MODAL -->
+    <div class="modal" id="folder-modal">
+        <div class="modal-content">
+            <h3>Nova pasta</h3>
+            <input id="new-folder-name" type="text" placeholder="Nome da pasta (ex.: Carro)" />
+            <div class="modal-actions">
+                <button id="cancel-create-folder" class="btn secondary">Cancelar</button>
+                <button id="confirm-create-folder" class="btn">Criar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
